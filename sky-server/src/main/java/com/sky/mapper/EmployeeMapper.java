@@ -25,7 +25,7 @@ public interface EmployeeMapper {
             "update_time,create_user,update_user) " +
             "values (#{name},#{username},#{password},#{phone}," +
             "#{sex},#{idNumber},#{status},#{createTime}," +
-            "#{updateTime},#{createTime},#{updateUser})")
+            "#{updateTime},#{createUser},#{updateUser})")
     void insert(Employee employee);
 }
 
