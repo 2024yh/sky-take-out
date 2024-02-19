@@ -74,11 +74,24 @@ public class CategoryController {
         return Result.success(list);
     }
 
+    /**
+     * 新增菜品分类
+     * @param categoryDTO
+     * @return
+     */
     @PutMapping()
     @ApiOperation("编辑菜品分类")
     public Result update(@RequestBody CategoryDTO categoryDTO){
         log.info("信息:{}",categoryDTO);
         categoryService.update(categoryDTO);
+        return Result.success();
+    }
+
+    @DeleteMapping
+    @ApiOperation("根据id删除菜品分类")
+    public Result deleteById(Long id){
+        log.info("id:{}",id);
+        categoryService.deleteById(id);
         return Result.success();
     }
 
